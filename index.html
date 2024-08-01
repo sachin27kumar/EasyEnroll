@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyEnroll-Your Partner in Hassle-Free Student Registration</title>
+    <meta name="description" content="EasyEnroll offers a user-friendly platform for hassle-free student registration, making it easy to manage student records and streamline the enrollment process.">
+    <meta name="keywords" content="student registration, EasyEnroll, enrollment, student records, educational management, registration form, online registration, student database">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <!-- main title section  -->
+    <header class="form-header text-center my-10 font-extrabold text-white tracking-wide">
+        <h1 class="text-4xl lg:text-5xl">EasyEnroll</h1>
+        <p class="text-sm mt-2 lg:text-lg">Your Partner in Hassle-Free Student Registration</p>
+    </header>
+
+    <div class="form-content  lg:flex lg:justify-around">
+<!-- registration section -->
+        <section class="registration-part  bg-blue-50 text-center mx-8 rounded-2xl md:mx-20 lg:mx-8 lg:w-[40%]">
+            <div class="py-4 text-xl font-bold text-cyan-900 tracking-wide md:text-2xl">
+                <h2>Registration Form</h2>
+                <hr class="h-px mx-8 my-2 border-0 bg-cyan-700">
+            </div>
+            <!-- form section -->
+             <form class="text-center">
+
+                    <div class="mb-4 lg:justify-center">
+                        <label class="form-label-style" for="name">Student Name</label>
+                        <input class="form-input-style" type="text" name="name" id="name" pattern="[A-Za-z\s]+" placeholder="John Wick" required/>
+                    </div>
+                    <!-- student ID only for numbers -->
+                    <div class="mb-4">
+                        <label class="text-cyan-700 font-bold text-lg block mb-1" for="studentId">Student ID</label>
+                        <input class="form-input-style" type="text" name="studentId" id="studentId" placeholder="Enter your 7 digit ID" pattern="\d{7}" maxlength="7" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-cyan-700 font-bold text-lg block mb-1" for="branch">Student Branch</label>
+                        <select class="form-input-style" id="branch" name="branch" aria-label="branch" required>
+                            <option value="">Please Select</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Electronics & Comm.">Electronics & Comm.</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Electrical">Electrical</option>
+                            <option value="Civil">Civil</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-cyan-700 font-bold text-lg block mb-1" for="contact">Contact No.</label>
+                        <input class="form-input-style" type="tel" name="contact" id="contact" placeholder="9876543210" pattern="\d{10}" inputmode="numeric" maxlength="10" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="text-cyan-700 font-bold text-lg block mb-1" for="email">Email ID</label>
+                        <input class="form-input-style" type="email" name="email" id="email" placeholder="example@example.com" required/>
+                    </div>
+                    <input class="bg-cyan-700 rounded-lg text-lg font-bold tracking-wide text-zinc-50 px-4 m-4 w-35 py-1 hover:bg-cyan-800 transition-colors md:w-40" type="submit" value="Submit" onclick="addRecord(event)"/>
+            </form>
+        </section>
+        <div class="horizontal-line mx-auto my-12 h-0.5 w-72 border-t-0 bg-slate-50 lg:hidden"></div>
+        <div class="vertical-line lg:my-auto lg:h-80 lg:w-0.5 lg:border-t-0 lg:bg-slate-50 " ></div>
+        <!-- student record section -->
+        <section class=" bg-blue-50 text-center mx-7 rounded-2xl lg:w-[60%] h-[550px] overflow-x-auto">
+            <div class="items-center">
+                <div class="sticky top-0 pt-4 text-xl z-10 bg-blue-50 font-bold text-cyan-900 tracking-wide md:text-2xl text-center">
+                    <h2>Student Record</h2>
+                    <hr class="h-px mx-8 my-2 border-0 bg-cyan-700">
+                </div>
+                <div class="mb-6 overflow-y-auto pb-3">
+                    <div class="flex">
+                        <h3 class="record-heading-style">Student Name</h3>
+                        <h3 class="record-heading-style">Student ID</h3>
+                        <h3 class="record-heading-style">Student Branch</h3>
+                        <h3 class="record-heading-style">Contact No.</h3>
+                        <h3 class="record-heading-style">Email ID</h3>
+                    </div>
+                    <div id="recordContainer">
+                        <!-- example record div -->
+                        <!-- <div class="flex" id="mainDiv">
+                            <div class="min-w-36 w-36 overflow-x-auto pb-1">
+                                <p class="record-data-style" id="record-name">Sachin Kumar Sheoran</p>
+                            </div>
+                            <p class="record-data-style min-w-24" id="record-studentId">8765432</p>
+                            <p class="record-data-style min-w-32 w-32" id="record-branch">Computer Science</p>
+                            <p class="record-data-style min-w-24" id="record-contact">8769399939</p>
+                            <div class="min-w-32 w-32 overflow-x-auto">
+                                <p class="record-data-style" id="record-email">sachin@gmail.com</p>
+                            </div>
+                            <button class="record-button-style" id="edit">Edit</button>
+                            <button class="record-button-style" id="delete">Delete</button>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
